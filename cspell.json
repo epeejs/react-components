@@ -1,0 +1,22 @@
+{
+  "version": "0.1",
+  "language": "en",
+  "words": [
+    "typeof",
+    "cnpm",
+    "tyarn",
+    "globby",
+    "umijs",
+    "eslintignore",
+    "editorconfig",
+    "commitlint"
+  ],
+  "ignorePaths": [
+    "package.json",
+    "node_modules/**",
+    "**/*.snap",
+    "coverage/**",
+    ".eslintrc.js",
+    "cspell.json"
+  ]
+}
