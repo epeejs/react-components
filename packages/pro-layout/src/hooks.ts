@@ -35,7 +35,3 @@ export const useRouteMeta = (inherit = true): Partial<Meta> => {
     return _.last(routes)?.meta ?? {};
   }, [inherit, routes]);
 };
-
-/**
- * 获取权限控制，需要当前或父级路由配置了 funcCode
- */
