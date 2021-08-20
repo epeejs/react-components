@@ -7,6 +7,10 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "antd",
+    "ant-design"
+  ],
   "scripts": {
     "build": "yarn clean && tsc",
     "dev": "tsc --watch",
