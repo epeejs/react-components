@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.4.1](https://github.com/vip-frondend/react-components/compare/v0.4.0...v0.4.1) (2021-08-20)
+
+### Features
+
+- 增加仓库地址信息 ([a17af3e](https://github.com/vip-frondend/react-components/commit/a17af3e313a23fce10e1e8edbb20b24d31670cfd))
+
 ## [0.4.0](https://github.com/vip-frondend/epeejs/compare/v0.3.0...v0.4.0) (2021-08-20)
 
 ### Features
