@@ -4,6 +4,7 @@ import _ from 'lodash';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useMatchedRoutes } from '../hooks';
+import './PageContainer.less';
 
 const { TabPane } = Tabs;
 
@@ -43,7 +44,7 @@ const PageContainer: React.FC<PageContainerProps> = ({
   }
 
   return (
-    <Space direction="vertical" size="middle">
+    <Space className="epe-page-container" direction="vertical" size="middle">
       <PageHeader
         ghost={false}
         breadcrumb={
