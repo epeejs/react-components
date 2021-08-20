@@ -44,7 +44,7 @@ const PageContainer: React.FC<PageContainerProps> = ({
   }
 
   return (
-    <Space className="epe-page-container" direction="vertical" size="middle">
+    <Space className="ep-page-container" direction="vertical" size="middle">
       <PageHeader
         ghost={false}
         breadcrumb={
