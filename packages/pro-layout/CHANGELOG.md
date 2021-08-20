@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/vip-frondend/epeejs/compare/v0.3.0...v0.4.0) (2021-08-20)
+
+### Features
+
+- 类名前缀使用 ep ([d71b29d](https://github.com/vip-frondend/epeejs/commit/d71b29d099c41af70af007be96b86f2b30ad2843))
+
 ## [0.3.0](https://github.com/vip-frondend/epeejs/compare/v0.2.0...v0.3.0) (2021-08-20)
 
 ### Features
