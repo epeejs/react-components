@@ -5,12 +5,15 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "lerna run dev",
     "test": "lerna run test",
     "build": "father-build",
-    "dev": "lerna run dev",
+    "publish": "lerna publish --yes",
+    "version:patch": "lerna version patch --yes",
+    "version:minor": "lerna version minor --yes",
+    "version:major": "lerna version major --yes",
     "prettier": "lerna run prettier",
-    "bootstrap": "lerna bootstrap",
-    "publish": "lerna publish"
+    "bootstrap": "lerna bootstrap"
   },
   "husky": {
     "hooks": {
