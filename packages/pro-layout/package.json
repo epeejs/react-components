@@ -4,6 +4,10 @@
   "main": "es/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vip-frondend/react-components/tree/main/packages/pro-layout"
+  },
   "license": "MIT",
   "files": [
     "es",
@@ -11,7 +15,8 @@
   ],
   "keywords": [
     "antd",
-    "ant-design"
+    "ant-design",
+    "epee-react-admin"
   ],
   "scripts": {
     "build": "yarn clean && tsc",
