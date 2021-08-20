@@ -1,11 +1,13 @@
 {
   "name": "@epeejs/pro-layout",
   "version": "0.3.0",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "es/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
   "license": "MIT",
   "files": [
-    "dist"
+    "es",
+    "README.md"
   ],
   "keywords": [
     "antd",

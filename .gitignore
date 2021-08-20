@@ -7,8 +7,9 @@
 _roadhog-api-doc
 
 # production
-/dist
-/.vscode
+dist
+es
+lib
 
 # misc
 .DS_Store
