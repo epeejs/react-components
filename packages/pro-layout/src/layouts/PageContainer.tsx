@@ -5,6 +5,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useMatchedRoutes } from '../hooks';
 import './PageContainer.less';
+import classNames from 'classnames';
 
 const { TabPane } = Tabs;
 
@@ -12,7 +13,9 @@ export interface BreadCrumbConfig {
   path?: string;
   name: string;
 }
-interface PageContainerProps {
+export interface PageContainerProps {
+  className?: string;
+  style?: React.CSSProperties;
   breadCrumbList?: BreadCrumbConfig[];
   loading?: boolean;
   tabActiveKey?: TabsProps['activeKey'];
@@ -35,6 +38,8 @@ const PageContainer: React.FC<PageContainerProps> = ({
   tabProps,
   title,
   headerProps,
+  className,
+  style,
 }) => {
   const matchedRoutes = useMatchedRoutes();
   const crumbs = breadCrumbList ?? (matchedRoutes.filter((m) => m.name) as BreadCrumbConfig[]);
@@ -44,7 +49,12 @@ const PageContainer: React.FC<PageContainerProps> = ({
   }
 
   return (
-    <Space className="ep-page-container" direction="vertical" size="middle">
+    <Space
+      className={classNames(['ep-page-container', className])}
+      direction="vertical"
+      size="middle"
+      style={style}
+    >
       <PageHeader
         ghost={false}
         breadcrumb={
@@ -74,6 +84,7 @@ const PageContainer: React.FC<PageContainerProps> = ({
       />
 
       {children}
+      <div></div>
     </Space>
   );
 };
