@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.4.2](https://github.com/vip-frondend/epeejs/compare/v0.4.1...v0.4.2) (2021-08-23)
+
+### Features
+
+- 导出公共组件 prop 及接收样式 prop ([e57d891](https://github.com/vip-frondend/epeejs/commit/e57d89127a956dee2574e85e2928a06480eb144a))
+
 ### [0.4.1](https://github.com/vip-frondend/epeejs/compare/v0.4.0...v0.4.1) (2021-08-20)
 
 ### Features
