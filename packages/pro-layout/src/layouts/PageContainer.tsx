@@ -84,7 +84,6 @@ const PageContainer: React.FC<PageContainerProps> = ({
       />
 
       {children}
-      <div></div>
     </Space>
   );
 };
