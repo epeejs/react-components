@@ -42,7 +42,8 @@
     "react-router-dom": "^5.2.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "antd": "^4.x",
