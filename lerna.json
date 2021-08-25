@@ -1,5 +1,5 @@
 {
-  "version": "0.4.2",
+  "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
@@ -72,5 +72,6 @@
       },
       "push": false
     }
-  }
+  },
+  "packages": ["packages/*"]
 }

@@ -1,0 +1,40 @@
+{
+  "name": "@epeejs/pro-table",
+  "version": "0.0.1",
+  "main": "es/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "license": "MIT",
+  "sideEffects": [
+    "*.less"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vip-frondend/react-components/tree/main/packages/pro-table"
+  },
+  "files": [
+    "es",
+    "README.md"
+  ],
+  "keywords": [
+    "antd",
+    "ant-design",
+    "epee-react-admin"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "@ant-design/pro-form": "^1.36.0",
+    "ahooks": "^2.10.9",
+    "antd": "^4.16.13"
+  },
+  "peerDependencies": {
+    "ahooks": ">=2",
+    "antd": ">=4",
+    "@ant-design/pro-form": ">1"
+  }
+}
