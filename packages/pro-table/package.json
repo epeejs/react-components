@@ -1,6 +1,6 @@
 {
   "name": "@epeejs/pro-table",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "es/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
@@ -37,5 +37,8 @@
     "@ant-design/pro-form": ">1",
     "ahooks": ">=2",
     "antd": ">=4"
+  },
+  "dependencies": {
+    "ahooks": "^2.10.9"
   }
 }
