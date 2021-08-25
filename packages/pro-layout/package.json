@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/vip-frondend/react-components/tree/main/packages/pro-layout"
   },
+  "sideEffects": [
+    "*.less"
+  ],
   "license": "MIT",
   "files": [
     "es",
@@ -40,5 +43,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "antd": "^4.x",
+    "react": ">=16.9.0",
+    "react-router": ">=5",
+    "react-router-dom": ">=5"
   }
 }
