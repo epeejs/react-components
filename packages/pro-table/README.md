@@ -1,11 +1,11 @@
-# `@epeejs/pro-table`
+# pro-table
 
-> TODO: description
+高级表格
 
-## Usage
+## 安装
 
-```
-const proTable = require('@epeejs/pro-table');
-
-// TODO: DEMONSTRATE API
+```sh
+npm i @epeejs/pro-table ahooks
+# or
+yarn add @epeejs/pro-table ahooks
 ```
