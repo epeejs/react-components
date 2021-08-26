@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.0](https://github.com/vip-frondend/react-components/compare/@epeejs/pro-layout@0.5.0...@epeejs/pro-layout@0.6.0) (2021-08-26)
+
+### Features
+
+- 新增 BasicLayout 组件，快速搭建基本页面结构及权限控制处理 ([90b053c](https://github.com/vip-frondend/react-components/commit/90b053cc16e9fed3c9309c2b89ffae20a423bb8b))
+
 ## 0.5.0 (2021-08-25)
 
 ### Features
