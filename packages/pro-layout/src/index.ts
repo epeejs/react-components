@@ -4,3 +4,4 @@ export { default as BlankLayout } from './layouts/BlankLayout';
 export { default as PageContainer } from './layouts/PageContainer';
 export { default as RouteLayout } from './layouts/RouteLayout';
 export { default as PageLoading } from './components/PageLoading';
+export { default as BasicLayout } from './layouts/BasicLayout';
