@@ -8,9 +8,9 @@
     "test": "lerna run test",
     "build": "father-build",
     "publish": "lerna publish --yes",
-    "version:patch": "lerna version patch --yes",
-    "version:minor": "lerna version minor --yes",
-    "version:major": "lerna version major --yes",
+    "version:patch": "yarn build && lerna version patch --yes",
+    "version:minor": "yarn build && lerna version minor --yes",
+    "version:major": "yarn build && lerna version major --yes",
     "prettier": "lerna run prettier",
     "bootstrap": "lerna bootstrap"
   },
