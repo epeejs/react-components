@@ -79,7 +79,7 @@ function BasicLayout<AuthorityType = any>({
           if (m.hideInMenu || m.redirect || !m.name || !checkAuth(authInfo, m.meta)) {
             return false;
           }
-          if (m.hideChildMenu) {
+          if (m.hideChildrenInMenu) {
             m.routes = undefined;
             return true;
           }

@@ -17,7 +17,7 @@ export interface RouteConfig {
   /** 在菜单中不展示这个路由，包括子路由，菜单不显示条件 hideInMenu || redirect || !name || !checkAuth */
   hideInMenu?: boolean;
   /** 在菜单中只展示该路由，不展示子路由  */
-  hideChildMenu?: boolean;
+  hideChildrenInMenu?: boolean;
   component?: React.ElementType;
   /** 设置跳转页面方式，将把 path 当作外链处理 */
   target?: OpenPageType;
