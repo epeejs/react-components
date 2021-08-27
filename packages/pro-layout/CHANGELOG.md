@@ -6,8 +6,6 @@ All notable changes to this project will be documented in this file. See [Conven
 
 ### Features
 
-- 新增 BasicLayout 组件，快速搭建基本页面结构及权限控制处理 ([90b053c](https://github.com/vip-frondend/react-components/commit/90b053cc16e9fed3c9309c2b89ffae20a423bb8b))
-- 指定发布仓库地址 ([8b84857](https://github.com/vip-frondend/react-components/commit/8b84857833c86be3095f332527f678ccfc6d76c9))
 - BasicLayout: 增加 siderRender 为空时默认渲染行为 ([98af7bc](https://github.com/vip-frondend/react-components/commit/98af7bc928943303a581403344f6ae27d1de7d3a))
 - RouteConfig: 新增页面布局相关配置 （headerRender、footerRender、siderRender） ([4e45bbd](https://github.com/vip-frondend/react-components/commit/4e45bbdc29233f3cef889155cafd562b78349bce))
 - RouteConfig: hideChildMenu 重命名为 hideChildrenInMenu ([f705f0d](https://github.com/vip-frondend/react-components/commit/f705f0d03ba7c7f1c8b803afe8267d6783f15ca0))
