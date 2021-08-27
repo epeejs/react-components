@@ -6,7 +6,7 @@ import React, { useMemo } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import BlankLayout from './BlankLayout';
 
-const { Content } = Layout;
+const { Content, Sider } = Layout;
 const { SubMenu, Item: MenuItem } = Menu;
 
 const renderMenu = (routes: RouteConfig[]) => {
@@ -122,32 +122,32 @@ function BasicLayout<AuthorityType = any>({
     return newRoutes;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [authInfo, displayRoutes, routes]);
+  const menu = pathname !== '/' && (
+    <Menu
+      mode="inline"
+      defaultOpenKeys={openKeys}
+      selectedKeys={paths}
+      onClick={(param) => {
+        const path = param.key as string;
+        const node = getRouteConfigByPath(routes, path)!;
+
+        if (!node.target) {
+          history.push(param.key);
+        } else {
+          window.open(path, node.target);
+        }
+      }}
+    >
+      {renderMenu(displayRoutes)}
+    </Menu>
+  );
+  const sider = siderRender ? siderRender(menu) : <Sider>{menu}</Sider>;
 
   return (
     <Layout>
       {header}
       <Layout>
-        {siderRender?.(
-          pathname !== '/' && (
-            <Menu
-              mode="inline"
-              defaultOpenKeys={openKeys}
-              selectedKeys={paths}
-              onClick={(param) => {
-                const path = param.key as string;
-                const node = getRouteConfigByPath(routes, path)!;
-
-                if (!node.target) {
-                  history.push(param.key);
-                } else {
-                  window.open(path, node.target);
-                }
-              }}
-            >
-              {renderMenu(displayRoutes)}
-            </Menu>
-          ),
-        )}
+        {sider}
         <Content>
           <BlankLayout routes={authRoutes} />
         </Content>
