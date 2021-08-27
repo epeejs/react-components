@@ -18,6 +18,12 @@ export interface RouteConfig {
   hideInMenu?: boolean;
   /** 在菜单中只展示该路由，不展示子路由  */
   hideChildrenInMenu?: boolean;
+  /** 当前路由是否展示展示顶栏 */
+  headerRender?: boolean;
+  /** 当前路由是否展示展示页脚 */
+  footerRender?: boolean;
+  /** 当前路由是否展示展示侧边栏 */
+  siderRender?: boolean;
   component?: React.ElementType;
   /** 设置跳转页面方式，将把 path 当作外链处理 */
   target?: OpenPageType;

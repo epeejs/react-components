@@ -3,8 +3,9 @@ import type { Meta, RouteConfig } from '../type';
 import { Layout, Menu } from 'antd';
 import _ from 'lodash';
 import React, { useMemo } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation, useRouteMatch } from 'react-router-dom';
 import BlankLayout from './BlankLayout';
+import { useMatchedRoutes } from '../hooks';
 
 const { Content, Sider } = Layout;
 const { SubMenu, Item: MenuItem } = Menu;
@@ -70,7 +71,22 @@ function BasicLayout<AuthorityType = any>({
   const { pathname } = useLocation();
   const paths = getMatchPaths(pathname);
   const openKeys = paths.slice(0, paths.length - 1);
-
+  const matchedRoutes = useMatchedRoutes();
+  const layoutConfig = matchedRoutes.reduce(
+    (prev, curr) => {
+      if (typeof curr.headerRender === 'boolean') {
+        prev.headerRender = curr.headerRender;
+      }
+      if (typeof curr.siderRender === 'boolean') {
+        prev.siderRender = curr.siderRender;
+      }
+      if (typeof curr.footerRender === 'boolean') {
+        prev.footerRender = curr.footerRender;
+      }
+      return prev;
+    },
+    { siderRender: true, headerRender: true, footerRender: true },
+  );
   const displayRoutes = useMemo(() => {
     const filterNode = (nodes: RouteConfig[]): RouteConfig[] => {
       return nodes
@@ -122,37 +138,42 @@ function BasicLayout<AuthorityType = any>({
     return newRoutes;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [authInfo, displayRoutes, routes]);
-  const menu = pathname !== '/' && (
-    <Menu
-      mode="inline"
-      defaultOpenKeys={openKeys}
-      selectedKeys={paths}
-      onClick={(param) => {
-        const path = param.key as string;
-        const node = getRouteConfigByPath(routes, path)!;
+  const getSider = () => {
+    const menu = pathname !== '/' && (
+      <Menu
+        mode="inline"
+        defaultOpenKeys={openKeys}
+        selectedKeys={paths}
+        onClick={(param) => {
+          const path = param.key as string;
+          const node = getRouteConfigByPath(routes, path)!;
 
-        if (!node.target) {
-          history.push(param.key);
-        } else {
-          window.open(path, node.target);
-        }
-      }}
-    >
-      {renderMenu(displayRoutes)}
-    </Menu>
-  );
-  const sider = siderRender ? siderRender(menu) : <Sider>{menu}</Sider>;
+          if (!node.target) {
+            history.push(param.key);
+          } else {
+            window.open(path, node.target);
+          }
+        }}
+      >
+        {renderMenu(displayRoutes)}
+      </Menu>
+    );
+    return siderRender ? siderRender(menu) : <Sider>{menu}</Sider>;
+  };
+  const headerDom = layoutConfig.headerRender ? header : null;
+  const siderDom = layoutConfig.siderRender ? getSider() : null;
+  const footerDom = layoutConfig.footerRender ? footer : null;
 
   return (
     <Layout>
-      {header}
+      {headerDom}
       <Layout>
-        {sider}
+        {siderDom}
         <Content>
           <BlankLayout routes={authRoutes} />
         </Content>
       </Layout>
-      {footer}
+      {footerDom}
     </Layout>
   );
 }
