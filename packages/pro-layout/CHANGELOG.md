@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.6.2](https://github.com/epeejs/react-components/compare/@epeejs/pro-layout@0.5.0...@epeejs/pro-layout@0.6.2) (2021-08-30)
+
+### Features
+
+- **BasicLayout:** props 属性修改为可选 ([dbc747e](https://github.com/epeejs/react-components/commit/dbc747efee038ba3b5e81981429a7e324406c91a))
+
 ### [0.6.1](https://github.com/vip-frondend/react-components/compare/@epeejs/pro-layout@0.5.0...@epeejs/pro-layout@0.6.1) (2021-08-27)
 
 ### Features
