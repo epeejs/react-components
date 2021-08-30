@@ -3,7 +3,7 @@ import type { Meta, RouteConfig } from '../type';
 import { Layout, Menu } from 'antd';
 import _ from 'lodash';
 import React, { useMemo } from 'react';
-import { useHistory, useLocation, useRouteMatch } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import BlankLayout from './BlankLayout';
 import { useMatchedRoutes } from '../hooks';
 
@@ -44,8 +44,8 @@ export type CheckAuth<AuthorityType = any> = (auth: AuthorityType, meta?: Meta) 
 
 export interface BasicLayoutProps<AuthorityType> {
   routes: RouteConfig[];
-  header: React.ReactNode;
-  footer: React.ReactNode;
+  header?: React.ReactNode;
+  footer?: React.ReactNode;
   authInfo?: AuthorityType;
   siderRender?: (menu: React.ReactNode) => React.ReactNode;
   /** 用于包裹需要权限控制的高阶组件函数 */
