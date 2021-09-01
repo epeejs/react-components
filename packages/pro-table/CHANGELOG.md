@@ -2,13 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-### [0.3.2](https://github.com/epeejs/react-components/compare/@epeejs/pro-table@0.1.0...@epeejs/pro-table@0.3.2) (2021-08-30)
+### [0.3.3](https://github.com/epeejs/react-components/compare/@epeejs/pro-table@0.1.0...@epeejs/pro-table@0.3.3) (2021-09-01)
 
-### [0.3.1](https://github.com/vip-frondend/react-components/compare/@epeejs/pro-table@0.1.0...@epeejs/pro-table@0.3.1) (2021-08-27)
+### Bug Fixes
 
-### Features
-
-- 指定发布仓库地址 ([8b84857](https://github.com/vip-frondend/react-components/commit/8b84857833c86be3095f332527f678ccfc6d76c9))
+- 修复类名错误 ([e9a9ae9](https://github.com/epeejs/react-components/commit/e9a9ae9ebad37d8e69be90fc2b5c62526cabd814))
 
 ## 0.1.0 (2021-08-25)
 

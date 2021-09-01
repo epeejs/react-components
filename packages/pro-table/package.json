@@ -1,6 +1,6 @@
 {
   "name": "@epeejs/pro-table",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "main": "es/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
