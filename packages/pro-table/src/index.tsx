@@ -89,7 +89,7 @@ const ProTable: React.FC<ProTableProps> = ({
 
       <Card {...tableCardProps}>
         <div className="ep-pro-table-header">
-          <div className="ep-pro-layout-header-title">{title}</div>
+          <div className="ep-pro-table-header-title">{title}</div>
           <div>{toolbar}</div>
         </div>
 
