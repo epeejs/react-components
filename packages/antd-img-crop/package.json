@@ -1,0 +1,51 @@
+{
+  "name": "@epeejs/antd-img-crop",
+  "version": "1.0.0",
+  "description": "An image cropper for Ant Design Upload",
+  "sideEffects": [
+    "*.less"
+  ],
+  "keywords": [
+    "react",
+    "antd",
+    "ant-design",
+    "upload",
+    "image",
+    "crop",
+    "cropper"
+  ],
+  "license": "MIT",
+  "main": "es/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "es",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epeejs/react-components/tree/main/packages/antd-img-crop"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/epeejs/react-components/issues"
+  },
+  "dependencies": {
+    "react-easy-crop": "^3.5.2"
+  },
+  "devDependencies": {
+    "antd": "^4.16.13",
+    "@types/react": "^17.0.19",
+    "react": "^17.0.2"
+  },
+  "peerDependencies": {
+    "antd": "^4.x",
+    "react": ">=16.9.0"
+  }
+}
