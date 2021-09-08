@@ -10,7 +10,7 @@ fork from [nanxiaobei/antd-img-crop](https://github.com/nanxiaobei/antd-img-crop
 - quality：图片质量默认值修改为 `0.8`
 - 使用 ts 编写
 
-beforeCrop 改动可以支持例如对 gif 图片上传不裁剪等功能
+beforeCrop 改动可以支持例如对 gif 图片不裁剪等功能
 
 ```tsx
 <ImgCrop beforeCrop={(file) => !file.type.includes('gif')}>
@@ -18,14 +18,14 @@ beforeCrop 改动可以支持例如对 gif 图片上传不裁剪等功能
 </ImgCrop>
 ```
 
-`antd-img-crop` 是返回 `false` 则不裁剪，也不会继续上传，如果需要实现原有功能，使用 antd Upload 组件的 `beforeUpload` 函数实现上传控制
+`antd-img-crop` 是返回 `false` 则不裁剪，也不会继续上传，如果需要实现原有功能，使用 antd Upload 组件的 `beforeUpload` 函数
 
 ## 安装
 
 ```sh
-yarn add antd-img-crop
-
-# npm install antd-img-crop
+yarn add @epeejs/antd-img-crop
+# or
+npm i @epeejs/antd-img-crop
 ```
 
 ## 使用
