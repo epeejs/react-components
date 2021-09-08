@@ -3344,10 +3344,10 @@
     jest-worker "24.9.0"
     prettier "2.2.1"
 
-"@umijs/fabric@^2.6.2":
-  version "2.6.4"
-  resolved "https://registry.npmjs.org/@umijs/fabric/-/fabric-2.6.4.tgz#026898a322052781ccf58af69e5dee7fb87ebdf9"
-  integrity sha512-QskH8U34zeSk3KPbw2AO0T6aYOIksJ6eSHvp52Izzr1fxXbnqmZGoFiXVKks9HtenV9vyOV7tpUWS9hAKtP55g==
+"@umijs/fabric@^2.6.7":
+  version "2.6.7"
+  resolved "https://registry.nlark.com/@umijs/fabric/download/@umijs/fabric-2.6.7.tgz?cache=0&sync_timestamp=1630465508820&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40umijs%2Ffabric%2Fdownload%2F%40umijs%2Ffabric-2.6.7.tgz#ec3152ac0bde33978ee3daa89e250710ff1edf7b"
+  integrity sha1-7DFSrAveM5eO49qoniUHEP8e33s=
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/eslint-parser" "^7.12.1"
@@ -3361,7 +3361,7 @@
     chalk "^4.1.1"
     eslint "^7.11.0"
     eslint-config-airbnb-base "^14.2.0"
-    eslint-config-prettier "^6.13.0"
+    eslint-config-prettier "^8.3.0"
     eslint-formatter-pretty "^4.0.0"
     eslint-plugin-babel "^5.3.0"
     eslint-plugin-compat "^3.1.1"
@@ -3369,14 +3369,15 @@
     eslint-plugin-import "^2.17.3"
     eslint-plugin-jest "^24.0.1"
     eslint-plugin-jsx-a11y "^6.2.0"
-    eslint-plugin-markdown "^1.0.0"
-    eslint-plugin-promise "^4.1.1"
+    eslint-plugin-markdown "^2.2.0"
+    eslint-plugin-promise "^5.0.0"
     eslint-plugin-react "^7.21.5"
     eslint-plugin-react-hooks "^4.1.2"
     eslint-plugin-unicorn "^20.0.0"
     fast-glob "^3.2.4"
     os-locale "^5.0.0"
-    prettier-plugin-style-order "^0.2.2"
+    prettier "^2.3.2"
+    prettier-plugin-two-style-order "^1.0.0"
     stylelint "^13.7.0"
     stylelint-config-css-modules "^2.2.0"
     stylelint-config-prettier "^8.0.1"
@@ -3384,8 +3385,7 @@
     stylelint-config-standard "^20.0.0"
     stylelint-declaration-block-no-ignored-properties "^2.1.0"
     stylelint-no-unsupported-browser-features "^4.1.4"
-    stylelint-order "^4.0.0"
-    typescript "^4.0.2"
+    typescript "^4.3.5"
 
 "@umijs/test@^3.5.4":
   version "3.5.17"
@@ -3735,7 +3735,7 @@ antd@^4.16.12:
 
 antd@^4.16.13:
   version "4.16.13"
-  resolved "https://registry.nlark.com/antd/download/antd-4.16.13.tgz?cache=0&sync_timestamp=1629706353524&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fantd%2Fdownload%2Fantd-4.16.13.tgz#e9b9b4a590db28747aae1cab98981649a35880af"
+  resolved "https://registry.nlark.com/antd/download/antd-4.16.13.tgz?cache=0&sync_timestamp=1631006785257&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fantd%2Fdownload%2Fantd-4.16.13.tgz#e9b9b4a590db28747aae1cab98981649a35880af"
   integrity sha1-6bm0pZDbKHR6rhyrmJgWSaNYgK8=
   dependencies:
     "@ant-design/colors" "^6.0.0"
@@ -6077,17 +6077,15 @@ eslint-config-airbnb-base@^14.2.0:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-prettier@^6.13.0:
-  version "6.15.0"
-  resolved "https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-6.15.0.tgz#7f93f6cb7d45a92f1537a70ecc06366e1ac6fed9"
-  integrity sha512-a1+kOYLR8wMGustcgAjdydMsQ2A/2ipRPwRKUmfYaSxc9ZPcrku080Ctl6zrZzZNs/U82MjSv+qKREkoq3bJaw==
-  dependencies:
-    get-stdin "^6.0.0"
-
 eslint-config-prettier@^7.0.0:
   version "7.2.0"
   resolved "https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-7.2.0.tgz#f4a4bd2832e810e8cc7c1411ec85b3e85c0c53f9"
   integrity sha512-rV4Qu0C3nfJKPOAhFujFxB7RMP+URFyQqqOZW9DMRD7ZDTFyjaIlETU3xzHELt++4ugC0+Jm084HQYkkJe+Ivg==
+
+eslint-config-prettier@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.nlark.com/eslint-config-prettier/download/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
+  integrity sha1-90cbILb+ipqSVMxoRFQgKIai3Xo=
 
 eslint-formatter-pretty@^4.0.0:
   version "4.1.0"
@@ -6201,14 +6199,12 @@ eslint-plugin-jsx-a11y@^6.2.0:
     jsx-ast-utils "^3.1.0"
     language-tags "^1.0.5"
 
-eslint-plugin-markdown@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/eslint-plugin-markdown/-/eslint-plugin-markdown-1.0.2.tgz#79274bf17ce3ead48e4a55cbcb6d7ce735754280"
-  integrity sha512-BfvXKsO0K+zvdarNc801jsE/NTLmig4oKhZ1U3aSUgTf2dB/US5+CrfGxMsCK2Ki1vS1R3HPok+uYpufFndhzw==
+eslint-plugin-markdown@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.nlark.com/eslint-plugin-markdown/download/eslint-plugin-markdown-2.2.0.tgz?cache=0&sync_timestamp=1622002677730&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-plugin-markdown%2Fdownload%2Feslint-plugin-markdown-2.2.0.tgz#9c30bd51538a815e87e96646c69f11466b4c165f"
+  integrity sha1-nDC9UVOKgV6H6WZGxp8RRmtMFl8=
   dependencies:
-    object-assign "^4.0.1"
-    remark-parse "^5.0.0"
-    unified "^6.1.2"
+    mdast-util-from-markdown "^0.8.5"
 
 eslint-plugin-node@^11.1.0:
   version "11.1.0"
@@ -6229,10 +6225,10 @@ eslint-plugin-prettier@^3.1.4:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-promise@^4.1.1:
-  version "4.3.1"
-  resolved "https://registry.npmjs.org/eslint-plugin-promise/-/eslint-plugin-promise-4.3.1.tgz#61485df2a359e03149fdafc0a68b0e030ad2ac45"
-  integrity sha512-bY2sGqyptzFBDLh/GMbAxfdJC+b0f23ME63FOE4+Jao0oZ3E1LEwFtWJX/1pGMJLiTtrSSern2CRM/g+dfc0eQ==
+eslint-plugin-promise@^5.0.0:
+  version "5.1.0"
+  resolved "https://registry.npm.taobao.org/eslint-plugin-promise/download/eslint-plugin-promise-5.1.0.tgz#fb2188fb734e4557993733b41aa1a688f46c6f24"
+  integrity sha1-+yGI+3NORVeZNzO0GqGmiPRsbyQ=
 
 eslint-plugin-react-hooks@^4.1.2:
   version "4.2.0"
@@ -7989,7 +7985,7 @@ is-boolean-object@^1.1.0:
     call-bind "^1.0.2"
     has-tostringtag "^1.0.0"
 
-is-buffer@^1.1.4, is-buffer@^1.1.5:
+is-buffer@^1.1.5:
   version "1.1.6"
   resolved "https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
@@ -9598,7 +9594,7 @@ lodash.zip@^4.2.0:
   resolved "https://registry.npmjs.org/lodash.zip/-/lodash.zip-4.2.0.tgz#ec6662e4896408ed4ab6c542a3990b72cc080020"
   integrity sha1-7GZi5IlkCO1KtsVCo5kLcswIACA=
 
-lodash@4.17.21, lodash@^4.0.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.7.0:
+lodash@4.17.21, lodash@^4.0.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -9818,7 +9814,7 @@ mdast-util-compact@^1.0.0:
   dependencies:
     unist-util-visit "^1.1.0"
 
-mdast-util-from-markdown@^0.8.0:
+mdast-util-from-markdown@^0.8.0, mdast-util-from-markdown@^0.8.5:
   version "0.8.5"
   resolved "https://registry.npmjs.org/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.5.tgz#d1ef2ca42bc377ecb0463a987910dae89bd9a28c"
   integrity sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ==
@@ -10427,6 +10423,11 @@ normalize-url@^6.1.0:
   version "6.1.0"
   resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-6.1.0.tgz#40d0885b535deffe3f3147bec877d05fe4c5668a"
   integrity sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A==
+
+normalize-wheel@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/normalize-wheel/download/normalize-wheel-1.0.1.tgz#aec886affdb045070d856447df62ecf86146ec45"
+  integrity sha1-rsiGr/2wRQcNhWRH32Ls+GFG7EU=
 
 now-and-later@^2.0.0:
   version "2.0.1"
@@ -11274,6 +11275,13 @@ postcss-less@^3.1.0, postcss-less@^3.1.4:
   dependencies:
     postcss "^7.0.14"
 
+postcss-less@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.nlark.com/postcss-less/download/postcss-less-4.0.1.tgz?cache=0&sync_timestamp=1627346502477&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fpostcss-less%2Fdownload%2Fpostcss-less-4.0.1.tgz#73caf5dac056d4b706f4cc136cefeaf4e79067a4"
+  integrity sha1-c8r12sBW1LcG9MwTbO/q9OeQZ6Q=
+  dependencies:
+    postcss "^8.1.2"
+
 postcss-load-config@^2.1.0:
   version "2.1.2"
   resolved "https://registry.npmjs.org/postcss-load-config/-/postcss-load-config-2.1.2.tgz#c5ea504f2c4aef33c7359a34de3573772ad7502a"
@@ -11571,13 +11579,12 @@ postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.5:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
-postcss-sorting@5.0.1, postcss-sorting@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.npmjs.org/postcss-sorting/-/postcss-sorting-5.0.1.tgz#10d5d0059eea8334dacc820c0121864035bc3f11"
-  integrity sha512-Y9fUFkIhfrm6i0Ta3n+89j56EFqaNRdUKqXyRp6kvTcSXnmgEjaVowCXH+JBe9+YKWqd4nc28r2sgwnzJalccA==
+postcss-sorting@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npm.taobao.org/postcss-sorting/download/postcss-sorting-6.0.0.tgz#2981c879bf324425ee5a19153c4d693cf60f94d5"
+  integrity sha1-KYHIeb8yRCXuWhkVPE1pPPYPlNU=
   dependencies:
-    lodash "^4.17.14"
-    postcss "^7.0.17"
+    lodash "^4.17.20"
 
 postcss-sorting@^4.1.0:
   version "4.1.0"
@@ -11638,7 +11645,7 @@ postcss@^6.0.1:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.13, postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.27, postcss@^7.0.31, postcss@^7.0.32, postcss@^7.0.35, postcss@^7.0.6, postcss@^7.0.7:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.13, postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.27, postcss@^7.0.32, postcss@^7.0.35, postcss@^7.0.6, postcss@^7.0.7:
   version "7.0.36"
   resolved "https://registry.npmjs.org/postcss/-/postcss-7.0.36.tgz#056f8cffa939662a8f5905950c07d5285644dfcb"
   integrity sha512-BebJSIUMwJHRH0HAQoxN4u1CN86glsrwsW0q7T+/m44eXOUAxSNdHRkNZPYz5vVUbg17hFgOQDE7fZk7li3pZw==
@@ -11647,7 +11654,7 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.13, postcss@^7.0.14, postcss@^7.0.1
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.1.4, postcss@^8.2.4:
+postcss@^8.1.2, postcss@^8.1.4, postcss@^8.2.4, postcss@^8.3.6:
   version "8.3.6"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.3.6.tgz#2730dd76a97969f37f53b9a6096197be311cc4ea"
   integrity sha512-wG1cc/JhRgdqB6WHEuyLTedf3KIRuD0hG6ldkFEZNCjRxiC+3i6kkWUUbiJQayP28iwG35cEmAbe98585BYV0A==
@@ -11678,13 +11685,14 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier-plugin-style-order@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.npmjs.org/prettier-plugin-style-order/-/prettier-plugin-style-order-0.2.2.tgz#cef2b6af3cfbeb52c821717daff4d8c0c824c012"
-  integrity sha512-4rASdHONhHLNX0arKqEvjGOEAbkSZE3+GQPSaS8mf3en/spjeN0le5fV1yKltWwQeM4UPn7CkKzeD97a4Az/6w==
+prettier-plugin-two-style-order@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.nlark.com/prettier-plugin-two-style-order/download/prettier-plugin-two-style-order-1.0.1.tgz#a10c6a385f05cc79dbe5848cbcee89d58f0a885d"
+  integrity sha1-oQxqOF8FzHnb5YSMvO6J1Y8KiF0=
   dependencies:
-    postcss-sorting "5.0.1"
-    resolve-cwd "^3.0.0"
+    postcss "^8.3.6"
+    postcss-less "^4.0.0"
+    postcss-sorting "6.0.0"
 
 prettier@2.2.1:
   version "2.2.1"
@@ -12272,6 +12280,14 @@ react-color@2.19.3:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
+react-easy-crop@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.nlark.com/react-easy-crop/download/react-easy-crop-3.5.2.tgz?cache=0&sync_timestamp=1625066084483&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-easy-crop%2Fdownload%2Freact-easy-crop-3.5.2.tgz#1fc65249e82db407c8c875159589a8029a9b7a06"
+  integrity sha1-H8ZSSegttAfIyHUVlYmoApqbegY=
+  dependencies:
+    normalize-wheel "^1.0.1"
+    tslib "2.0.1"
+
 react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -12605,27 +12621,6 @@ regjsparser@^0.6.4:
   integrity sha512-ZqbNRz1SNjLAiYuwY0zoXW8Ne675IX5q+YHioAGbCw4X96Mjl2+dcX9B2ciaeyYjViDAfvIjFpQjJgLttTEERQ==
   dependencies:
     jsesc "~0.5.0"
-
-remark-parse@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/remark-parse/-/remark-parse-5.0.0.tgz#4c077f9e499044d1d5c13f80d7a98cf7b9285d95"
-  integrity sha512-b3iXszZLH1TLoyUzrATcTQUZrwNl1rE70rVdSruJFlDaJ9z5aMkhrG43Pp68OgfHndL/ADz6V69Zow8cTQu+JA==
-  dependencies:
-    collapse-white-space "^1.0.2"
-    is-alphabetical "^1.0.0"
-    is-decimal "^1.0.0"
-    is-whitespace-character "^1.0.0"
-    is-word-character "^1.0.0"
-    markdown-escapes "^1.0.0"
-    parse-entities "^1.1.0"
-    repeat-string "^1.5.4"
-    state-toggle "^1.0.0"
-    trim "0.0.1"
-    trim-trailing-lines "^1.0.0"
-    unherit "^1.0.4"
-    unist-util-remove-position "^1.0.0"
-    vfile-location "^2.0.0"
-    xtend "^4.0.1"
 
 remark-parse@^6.0.0:
   version "6.0.3"
@@ -13838,15 +13833,6 @@ stylelint-order@^2.2.1:
     postcss "^7.0.2"
     postcss-sorting "^4.1.0"
 
-stylelint-order@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.npmjs.org/stylelint-order/-/stylelint-order-4.1.0.tgz#692d05b7d0c235ac66fcf5ea1d9e5f08a76747f6"
-  integrity sha512-sVTikaDvMqg2aJjh4r48jsdfmqLT+nqB1MOsaBnvM3OwLx4S+WXcsxsgk5w18h/OZoxZCxuyXMh61iBHcj9Qiw==
-  dependencies:
-    lodash "^4.17.15"
-    postcss "^7.0.31"
-    postcss-sorting "^5.0.1"
-
 stylelint@^13.7.0:
   version "13.13.1"
   resolved "https://registry.npmjs.org/stylelint/-/stylelint-13.13.1.tgz#fca9c9f5de7990ab26a00f167b8978f083a18f3c"
@@ -14523,10 +14509,15 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^4.0.2, typescript@^4.0.5, typescript@^4.3.4:
+typescript@^4.0.5, typescript@^4.3.4:
   version "4.3.5"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
   integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
+
+typescript@^4.3.5:
+  version "4.4.2"
+  resolved "https://registry.nlark.com/typescript/download/typescript-4.4.2.tgz?cache=0&sync_timestamp=1630999312832&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
+  integrity sha1-bWGGQNQw41aaHftE99fmAM7T7oY=
 
 uglify-js@^2.8.22:
   version "2.8.29"
@@ -14603,18 +14594,6 @@ unicode-property-aliases-ecmascript@^1.0.4:
   version "1.1.0"
   resolved "https://registry.npmjs.org/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.1.0.tgz#dd57a99f6207bedff4628abefb94c50db941c8f4"
   integrity sha512-PqSoPh/pWetQ2phoj5RLiaqIk4kCNwoV3CI+LfGmWLKI3rE3kl1h59XpX2BjgDrmbxD9ARtQobPGU1SguCYuQg==
-
-unified@^6.1.2:
-  version "6.2.0"
-  resolved "https://registry.npmjs.org/unified/-/unified-6.2.0.tgz#7fbd630f719126d67d40c644b7e3f617035f6dba"
-  integrity sha512-1k+KPhlVtqmG99RaTbAv/usu85fcSRu3wY8X+vnsEhIxNP5VbVIDiXnLqyKIG+UMdyTg0ZX9EI6k2AfjJkHPtA==
-  dependencies:
-    bail "^1.0.0"
-    extend "^3.0.0"
-    is-plain-obj "^1.1.0"
-    trough "^1.0.0"
-    vfile "^2.0.0"
-    x-is-string "^0.1.0"
 
 unified@^7.0.0:
   version "7.1.0"
@@ -14985,16 +14964,6 @@ vfile-message@^2.0.0:
   dependencies:
     "@types/unist" "^2.0.0"
     unist-util-stringify-position "^2.0.0"
-
-vfile@^2.0.0:
-  version "2.3.0"
-  resolved "https://registry.npmjs.org/vfile/-/vfile-2.3.0.tgz#e62d8e72b20e83c324bc6c67278ee272488bf84a"
-  integrity sha512-ASt4mBUHcTpMKD/l5Q+WJXNtshlWxOogYyGYYrg4lt/vuRjC1EFQtlAofL5VmtVNIZJzWYFJjzGWZ0Gw8pzW1w==
-  dependencies:
-    is-buffer "^1.1.4"
-    replace-ext "1.0.0"
-    unist-util-stringify-position "^1.0.0"
-    vfile-message "^1.0.0"
 
 vfile@^3.0.0:
   version "3.0.1"
