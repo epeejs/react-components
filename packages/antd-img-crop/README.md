@@ -8,6 +8,7 @@ fork from [nanxiaobei/antd-img-crop](https://github.com/nanxiaobei/antd-img-crop
 
 - beforeCrop：返回 `false` 时，仍然会进行文件上传
 - quality：图片质量默认值修改为 `0.8`
+- 不需要单独导入样式文件（已经按需加载）
 - 使用 ts 编写
 
 beforeCrop 改动可以支持例如对 gif 图片不裁剪等功能
