@@ -30,7 +30,7 @@ export interface ImgCropProps {
   children?: React.ReactNode;
 }
 
-const ImgCrop: React.ForwardRefRenderFunction<any, ImgCropProps> = (
+const ImgCropInner: React.ForwardRefRenderFunction<any, ImgCropProps> = (
   {
     aspect = 1,
     shape = 'rect',
@@ -253,4 +253,6 @@ const ImgCrop: React.ForwardRefRenderFunction<any, ImgCropProps> = (
   );
 };
 
-export default React.forwardRef(ImgCrop);
+const ImgCrop = React.forwardRef(ImgCropInner);
+
+export default ImgCrop;
