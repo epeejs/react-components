@@ -70,7 +70,8 @@
         "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
         "userUrlFormat": "{{host}}/{{user}}"
       },
-      "push": false
+      "push": false,
+      "exact": true
     }
   },
   "packages": ["packages/*"]
