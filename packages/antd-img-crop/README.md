@@ -25,8 +25,6 @@ beforeCrop 改动可以支持例如对 gif 图片不裁剪等功能
 
 ```sh
 yarn add @epeejs/antd-img-crop
-# or
-npm i @epeejs/antd-img-crop
 ```
 
 ## 使用

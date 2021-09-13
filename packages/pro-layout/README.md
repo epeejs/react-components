@@ -2,6 +2,11 @@
 
 公共布局组件
 
+## 前置依赖
+
+- antd
+- react-router-dom
+
 ## 安装
 
 ```sh
