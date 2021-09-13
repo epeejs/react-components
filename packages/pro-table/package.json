@@ -37,8 +37,5 @@
     "@ant-design/pro-form": ">1",
     "ahooks": ">=2",
     "antd": ">=4"
-  },
-  "dependencies": {
-    "ahooks": "^2.10.9"
   }
 }
