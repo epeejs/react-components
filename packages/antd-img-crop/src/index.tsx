@@ -1,7 +1,7 @@
 import type { UploadProps } from 'antd';
 import { Modal } from 'antd';
 import type { RcFile } from 'antd/es/upload';
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import type { CropperProps } from 'react-easy-crop';
 import type { Area } from 'react-easy-crop/types';
 import type { EasyCropProps } from './EasyCrop';
@@ -24,6 +24,7 @@ export interface ImgCropProps {
   modalCancel?: string;
   onModalOk?: (file: RcFile) => void;
   onModalCancel?: () => void;
+  beforeUpload?: (file: RcFile, fileList: RcFile[]) => boolean;
   beforeCrop?: (file: RcFile, fileList: RcFile[]) => boolean;
   onUploadFail?: (err: Error) => void;
   cropperProps?: Partial<CropperProps>;
@@ -51,6 +52,7 @@ const ImgCropInner: React.ForwardRefRenderFunction<any, ImgCropProps> = (
     onUploadFail,
     cropperProps,
     children,
+    beforeUpload,
   },
   ref,
 ) => {
@@ -60,10 +62,10 @@ const ImgCropInner: React.ForwardRefRenderFunction<any, ImgCropProps> = (
   const rejectRef = useRef<any>();
   const beforeUploadRef = useRef<UploadProps['beforeUpload']>();
 
-  const getUpload = useCallback(() => {
+  const getUpload = () => {
     const upload = (Array.isArray(children) ? children[0] : children) as React.ReactElement;
-    const { beforeUpload, accept, ...restUploadProps } = upload.props;
-    beforeUploadRef.current = beforeUpload;
+    const { beforeUpload: _beforeUpload, accept, ...restUploadProps } = upload.props;
+    beforeUploadRef.current = _beforeUpload;
 
     return {
       ...upload,
@@ -72,6 +74,11 @@ const ImgCropInner: React.ForwardRefRenderFunction<any, ImgCropProps> = (
         accept: accept || 'image/*',
         beforeUpload: (file: RcFile, fileList: RcFile[]) => {
           return new Promise((resolve, reject) => {
+            const needUpload = beforeUpload?.(file, fileList) ?? true;
+
+            if (!needUpload) {
+              return reject();
+            }
             const crop = beforeCrop?.(file, fileList) ?? true;
 
             if (!crop) {
@@ -95,7 +102,7 @@ const ImgCropInner: React.ForwardRefRenderFunction<any, ImgCropProps> = (
         },
       },
     };
-  }, [beforeCrop, children, onModalOk, onUploadFail]);
+  };
 
   /**
    * Crop

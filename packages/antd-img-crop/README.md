@@ -8,8 +8,11 @@ fork from [nanxiaobei/antd-img-crop](https://github.com/nanxiaobei/antd-img-crop
 
 - beforeCrop：返回 `false` 时，仍然会进行文件上传
 - quality：图片质量默认值修改为 `0.8`
+- 新增 beforeUpload 方法，补充 beforeCrop 不能拦截上传能力
 - 不需要单独导入样式文件（已经按需加载）
 - 使用 ts 编写
+
+现在上传流程变为 beforeUpload（Crop）-> beforeCrop（Crop）-> beforeUpload（Antd Upload），其中 beforeCrop 只控制是否裁剪，beforeUpload 返回 false 则会终止后面流程
 
 beforeCrop 改动可以支持例如对 gif 图片不裁剪等功能
 
@@ -60,5 +63,6 @@ const Demo = () => (
 | onModalOK | `function` | - | 点击弹窗确定回调 |
 | onModalCancel | `function` | - | 点击弹窗遮罩层、右上角叉、取消的回调 |
 | beforeCrop | `function` | - | 弹窗打开前调用，若返回 `false`，弹框将不会打开，但任然会执行 ant upload 组件的上传 |
+| beforeUpload | `function` | - | beforeCrop 调用前触发，若返回 `false`，将不会进行裁剪与上传操作 |
 | onUploadFail | `function` | - | 上传失败时的回调 |
 | cropperProps | `object` | - | [react-easy-crop] 的 props（\* [已有 props] 无法重写） |
