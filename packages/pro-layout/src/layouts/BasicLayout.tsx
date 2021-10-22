@@ -1,11 +1,12 @@
-import { getFirstLeafNode, getMatchPaths, getRouteConfigByPath } from '../utils';
-import type { Meta, RouteConfig } from '../type';
+/* eslint-disable no-param-reassign */
 import { Layout, Menu } from 'antd';
 import _ from 'lodash';
 import React, { useMemo } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import BlankLayout from './BlankLayout';
 import { useMatchedRoutes } from '../hooks';
+import type { Meta, RouteConfig } from '../type';
+import { getFirstLeafNode, getMatchPaths, getRouteConfigByPath } from '../utils';
+import BlankLayout from './BlankLayout';
 
 const { Content, Sider } = Layout;
 const { SubMenu, Item: MenuItem } = Menu;
