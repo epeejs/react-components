@@ -1,9 +1,11 @@
 {
   "name": "@epeejs/pro-layout",
-  "version": "0.6.2",
+  "version": "1.0.0",
+  "description": "用于快速搭建中后台页面结构",
   "main": "es/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
+  "homepage": "https://github.com/epeejs/react-components/blob/main/packages/pro-layout/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/epeejs/react-components/tree/main/packages/pro-layout"
@@ -19,7 +21,8 @@
   "keywords": [
     "antd",
     "ant-design",
-    "epee-react-admin"
+    "epee-react-admin",
+    "layout"
   ],
   "scripts": {
     "build": "yarn clean && tsc",
