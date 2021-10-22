@@ -2,7 +2,7 @@
 
 高级表格
 
-## 前置依赖
+## peerDependencies
 
 - ahooks
 - @ant-design/pro-form

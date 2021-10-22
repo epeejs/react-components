@@ -1,8 +1,8 @@
 # pro-layout
 
-ProLayout 提供标准但灵活的中后端布局，具有路由权限及自动菜单生成功能，它可以与 PageContainer 一起使用来自动生成面包屑、页眉，并提供访问路由配置的低成本解决方案
+ProLayout 提供标准但灵活的中后端布局，具有路由权限及自动菜单生成功能，它可以与 PageContainer 一起使用来自动生成面包屑、页眉等，并提供访问路由配置的低成本解决方案
 
-## 前置依赖
+## peerDependencies
 
 - antd
 - react-router-dom
@@ -16,7 +16,8 @@ yarn add @epeejs/pro-layout
 ## 使用
 
 ```tsx
-import { BlankLayout } from '@epeejs/pro-layout';
+import { BlankLayout, RouteLayout } from '@epeejs/pro-layout';
+import type { RouteConfig } from '@epeejs/pro-layout/es/type';
 
 const routes: RouteConfig[] = [
   { path: '/login', name: '登录', component: Login },
