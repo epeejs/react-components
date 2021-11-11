@@ -5,10 +5,10 @@
   "main": "es/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
-  "homepage": "https://github.com/epeejs/react-components/blob/main/packages/pro-table/README.md",
   "license": "MIT",
   "sideEffects": [
-    "*.less"
+    "**/*.css",
+    "**/*.less"
   ],
   "repository": {
     "type": "git",
