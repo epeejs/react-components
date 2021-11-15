@@ -24,12 +24,6 @@
     "epee-react-admin",
     "layout"
   ],
-  "scripts": {
-    "build": "yarn clean && tsc",
-    "dev": "tsc --watch",
-    "clean": "gts clean",
-    "test": "umi-test"
-  },
   "dependencies": {
     "classnames": "^2.3.1",
     "lodash": "^4.17.21"
