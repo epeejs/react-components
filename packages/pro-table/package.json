@@ -1,7 +1,7 @@
 {
   "name": "@epeejs/pro-table",
   "description": "高级表格组件",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "main": "es/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
