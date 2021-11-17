@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import last from 'lodash/last';
 import { useContext, useMemo } from 'react';
 import { useLocation } from 'react-router';
 import { RouteContext } from './layouts/RouteLayout';
@@ -32,6 +32,6 @@ export const useRouteMeta = (inherit = true): Partial<Meta> => {
         return prev;
       }, {});
     }
-    return _.last(routes)?.meta ?? {};
+    return last(routes)?.meta ?? {};
   }, [inherit, routes]);
 };

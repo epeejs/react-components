@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import isEmpty from 'lodash/isEmpty';
 import type { RouteConfig } from './type';
 
 /**
@@ -25,7 +25,7 @@ export function getRouteConfigByPath(routes: RouteConfig[], path: string): Route
     if (route.path === path) {
       return route;
     }
-    if (!_.isEmpty(route.routes)) {
+    if (!isEmpty(route.routes)) {
       const node = getRouteConfigByPath(route.routes!, path);
 
       if (node) {
@@ -46,7 +46,7 @@ export function getFirstLeafNode(routes: RouteConfig[]): RouteConfig | undefined
   if (!firstNode) {
     return firstNode;
   }
-  if (_.isEmpty(firstNode.routes)) {
+  if (isEmpty(firstNode.routes)) {
     return firstNode;
   }
   return getFirstLeafNode(firstNode.routes!);
@@ -74,7 +74,7 @@ export function getRouteNode(
     return result;
   }
   result.push(route);
-  if (_.isEmpty(route.routes)) {
+  if (isEmpty(route.routes)) {
     return result;
   }
 

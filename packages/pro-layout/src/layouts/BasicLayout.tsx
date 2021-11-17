@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { Layout, Menu } from 'antd';
-import _ from 'lodash';
+import isEmpty from 'lodash/isEmpty';
 import React, { useMemo } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { useMatchedRoutes } from '../hooks';
@@ -13,7 +13,7 @@ const { SubMenu, Item: MenuItem } = Menu;
 
 const renderMenu = (routes: RouteConfig[]) => {
   return routes.map((m) => {
-    if (!_.isEmpty(m.routes)) {
+    if (!isEmpty(m.routes)) {
       return (
         <SubMenu
           key={m.path}
@@ -100,7 +100,7 @@ function BasicLayout<AuthorityType = any>({
             m.routes = undefined;
             return true;
           }
-          if (!_.isEmpty(m.routes)) {
+          if (!isEmpty(m.routes)) {
             m.routes = filterNode(m.routes!);
             // 子节点为空时，是否隐藏父节点
             return m.routes.length;
@@ -121,7 +121,7 @@ function BasicLayout<AuthorityType = any>({
         if (cloneNode.component) {
           cloneNode.component = withAuthorized(cloneNode.component, cloneNode.meta);
         }
-        if (!_.isEmpty(cloneNode.routes)) {
+        if (!isEmpty(cloneNode.routes)) {
           cloneNode.routes = wrapNode(cloneNode.routes!);
         }
 
