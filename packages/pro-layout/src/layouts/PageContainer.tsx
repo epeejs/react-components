@@ -1,11 +1,11 @@
 import type { PageHeaderProps, TabPaneProps, TabsProps } from 'antd';
 import { Breadcrumb, PageHeader, Space, Spin, Tabs } from 'antd';
-import _ from 'lodash';
+import classNames from 'classnames';
+import last from 'lodash/last';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useMatchedRoutes } from '../hooks';
 import './PageContainer.less';
-import classNames from 'classnames';
 
 const { TabPane } = Tabs;
 
@@ -70,7 +70,7 @@ const PageContainer: React.FC<PageContainerProps> = ({
             ))}
           </Breadcrumb>
         }
-        title={title ?? _.last(crumbs)?.name}
+        title={title ?? last(crumbs)?.name}
         footer={
           tabList && (
             <Tabs activeKey={tabActiveKey} onChange={onTabChange} {...tabProps}>

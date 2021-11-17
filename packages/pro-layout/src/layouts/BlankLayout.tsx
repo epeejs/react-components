@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import isEmpty from 'lodash/isEmpty';
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import type { RouteConfig } from '../type';
@@ -45,7 +45,7 @@ const BlankLayout: React.FC<BlankLayoutProps> = (props) => {
                   childComp && React.createElement(childComp),
                 );
               }
-              if (!_.isEmpty(routes)) {
+              if (!isEmpty(routes)) {
                 return <BlankLayout routes={routes!} />;
               }
             }}
