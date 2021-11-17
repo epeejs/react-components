@@ -1,13 +1,11 @@
+import type { Service } from '@ahooksjs/use-request/lib/types';
 import type { QueryFilterProps } from '@ant-design/pro-form';
 import { QueryFilter } from '@ant-design/pro-form';
 import { useAntdTable } from 'ahooks';
-import type {
-  CombineService,
-  PaginatedFormatReturn,
-  PaginatedParams,
-} from 'ahooks/lib/useAntdTable';
+import type { PaginatedFormatReturn, PaginatedParams } from 'ahooks/lib/useAntdTable';
 import type { CardProps } from 'antd';
 import { Card, Form, Space, Table } from 'antd';
+import type { FormInstance } from 'antd/es/form/Form';
 import type { ColumnsType } from 'antd/lib/table';
 import classNames from 'classnames';
 import React, { useImperativeHandle } from 'react';
@@ -20,7 +18,7 @@ export type ActionType = {
 export interface ProTableProps {
   className?: string;
   style?: React.CSSProperties;
-  request?: CombineService<PaginatedFormatReturn<any>, PaginatedParams>;
+  request?: Service<PaginatedFormatReturn<any>, PaginatedParams>;
   columns?: ColumnsType<any>;
   title?: string;
   toolbar?: React.ReactNode;
@@ -30,9 +28,12 @@ export interface ProTableProps {
   tableCardProps?: CardProps;
   queryCardProps?: CardProps;
   queryFilterProps?: QueryFilterProps;
+  noStyle?: boolean;
+  extraFilterParams?: Record<string, any>;
+  form?: FormInstance;
 }
 
-const defaultRequest: ProTableProps['request'] = () => Promise.resolve({});
+const defaultRequest: ProTableProps['request'] = () => Promise.resolve({ total: 0, list: [] });
 
 const ProTable: React.FC<ProTableProps> = ({
   className,
@@ -48,15 +49,33 @@ const ProTable: React.FC<ProTableProps> = ({
   queryCardProps,
   queryFilterProps,
   children,
+  noStyle,
+  extraFilterParams,
+  form: _form,
 }) => {
-  const [form] = Form.useForm();
+  const [form] = Form.useForm(_form);
+  const tableRequest = extraFilterParams
+    ? (pageParams: PaginatedParams[0], formParams: PaginatedParams[1]) =>
+        request(pageParams, {
+          ...formParams,
+          ...extraFilterParams,
+        })
+    : request;
   const {
     tableProps,
     search: { submit },
     refresh,
-  } = useAntdTable(request, {
+  } = useAntdTable(tableRequest, {
     form: children ? form : undefined,
   });
+  const cardStyle: CardProps | undefined = noStyle
+    ? {
+        bordered: false,
+        bodyStyle: {
+          padding: '0',
+        },
+      }
+    : undefined;
 
   useImperativeHandle(actionRef, () => ({ refresh, submit }), [refresh, submit]);
 
@@ -68,7 +87,7 @@ const ProTable: React.FC<ProTableProps> = ({
       size="middle"
     >
       {children && (
-        <Card {...queryCardProps}>
+        <Card {...queryCardProps} {...cardStyle}>
           <QueryFilter
             form={form}
             onFinish={submit as any}
@@ -87,7 +106,7 @@ const ProTable: React.FC<ProTableProps> = ({
         </Card>
       )}
 
-      <Card {...tableCardProps}>
+      <Card {...tableCardProps} {...cardStyle}>
         <div className="ep-pro-table-header">
           <div className="ep-pro-table-header-title">{title}</div>
           <div>{toolbar}</div>
