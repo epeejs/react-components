@@ -88,7 +88,7 @@ function BasicLayout<AuthorityType = any>({
     },
     { siderRender: true, headerRender: true, footerRender: true },
   );
-  const displayRoutes = useMemo(() => {
+  const menuRoutes = useMemo(() => {
     const filterNode = (nodes: RouteConfig[]): RouteConfig[] => {
       return nodes
         .map((m) => ({ ...m }))
@@ -129,16 +129,21 @@ function BasicLayout<AuthorityType = any>({
       });
     };
     const newRoutes = wrapNode(routes);
-    const firstLeafNode = getFirstLeafNode(displayRoutes);
     const redirectNode = newRoutes.find((m) => m.path === '/' && m.redirect);
 
-    if (firstLeafNode && redirectNode && redirectNode.redirect !== firstLeafNode.path) {
-      redirectNode.redirect = firstLeafNode.path;
+    if (redirectNode) {
+      const targetRoute = getRouteConfigByPath(menuRoutes, redirectNode.redirect!);
+      const firstLeafNode = getFirstLeafNode(menuRoutes);
+
+      // 如果重定向页面无权限访问且第一个叶节点存在，则修改为跳转到第一个叶节点
+      if (!targetRoute && firstLeafNode) {
+        redirectNode.redirect = firstLeafNode.path;
+      }
     }
 
     return newRoutes;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [authInfo, displayRoutes, routes]);
+  }, [authInfo, menuRoutes, routes]);
   const getSider = () => {
     const menu = pathname !== '/' && (
       <Menu
@@ -156,7 +161,7 @@ function BasicLayout<AuthorityType = any>({
           }
         }}
       >
-        {renderMenu(displayRoutes)}
+        {renderMenu(menuRoutes)}
       </Menu>
     );
     return siderRender ? siderRender(menu) : <Sider>{menu}</Sider>;

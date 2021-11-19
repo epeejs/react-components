@@ -1,6 +1,6 @@
 {
   "name": "@epeejs/pro-layout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "用于快速搭建中后台页面结构",
   "main": "es/index.js",
   "module": "es/index.js",

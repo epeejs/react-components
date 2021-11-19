@@ -43,6 +43,7 @@ export function getRouteConfigByPath(routes: RouteConfig[], path: string): Route
 export function getFirstLeafNode(routes: RouteConfig[]): RouteConfig | undefined {
   const firstNode = routes[0];
 
+  // 不存在节点时，则返回 undefined
   if (!firstNode) {
     return firstNode;
   }
