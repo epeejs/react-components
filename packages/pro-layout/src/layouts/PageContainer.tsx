@@ -81,7 +81,9 @@ const PageContainer: React.FC<PageContainerProps> = ({
           )
         }
         {...headerProps}
-      />
+      >
+        {headerProps?.content}
+      </PageHeader>
 
       {children}
     </Space>
