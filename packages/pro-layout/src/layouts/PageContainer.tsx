@@ -25,7 +25,9 @@ export interface PageContainerProps {
   onTabChange?: TabsProps['onChange'];
   tabProps?: TabsProps;
   title?: string;
-  headerProps?: PageHeaderProps;
+  headerProps?: PageHeaderProps & {
+    content?: React.ReactNode;
+  };
 }
 
 const PageContainer: React.FC<PageContainerProps> = ({
