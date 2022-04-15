@@ -1,12 +1,17 @@
 import type { UploadProps } from 'antd';
 import { Modal } from 'antd';
 import type { RcFile } from 'antd/es/upload';
-import React, { useRef, useState } from 'react';
+import React, { useImperativeHandle, useRef, useState } from 'react';
 import type { CropperProps } from 'react-easy-crop';
 import type { Area } from 'react-easy-crop/types';
 import type { EasyCropProps } from './EasyCrop';
 import EasyCrop, { INIT_ROTATE, pkg } from './EasyCrop';
 import './index.less';
+
+export interface CropType {
+  getCropData: () => (Area & { rotate: number }) | undefined;
+  getOriginFile: () => File | undefined;
+}
 
 export interface ImgCropProps {
   aspect?: number;
@@ -29,6 +34,7 @@ export interface ImgCropProps {
   onUploadFail?: (err: Error) => void;
   cropperProps?: Partial<CropperProps>;
   children?: React.ReactNode;
+  cropRef?: React.Ref<CropType | undefined>;
 }
 
 const ImgCropInner: React.ForwardRefRenderFunction<any, ImgCropProps> = (
@@ -53,6 +59,7 @@ const ImgCropInner: React.ForwardRefRenderFunction<any, ImgCropProps> = (
     cropperProps,
     children,
     beforeUpload,
+    cropRef,
   },
   ref,
 ) => {
@@ -220,6 +227,24 @@ const ImgCropInner: React.ForwardRefRenderFunction<any, ImgCropProps> = (
     };
     canvas.toBlob(onBlob, type, quality);
   };
+
+  useImperativeHandle(
+    cropRef,
+    () => ({
+      getCropData() {
+        return (
+          cropPixelsRef?.current && {
+            ...cropPixelsRef.current,
+            rotate: rotateValRef.current!,
+          }
+        );
+      },
+      getOriginFile() {
+        return fileRef.current;
+      },
+    }),
+    [],
+  );
 
   return (
     <>
