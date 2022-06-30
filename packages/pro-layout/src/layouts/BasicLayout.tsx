@@ -53,6 +53,7 @@ export interface BasicLayoutProps<AuthorityType> {
   createAuthorized?: CreateAuthorized<AuthorityType>;
   /** 权限检查 */
   checkAuth?: CheckAuth<AuthorityType>;
+  contentClassName?: string;
 }
 
 const defaultCheckAuth: CheckAuth = () => true;
@@ -67,6 +68,7 @@ function BasicLayout<AuthorityType = any>({
   authInfo = defaultAuthInfo,
   checkAuth = defaultCheckAuth,
   createAuthorized = defaultCreateAuthorized,
+  contentClassName,
 }: BasicLayoutProps<AuthorityType>) {
   const history = useHistory();
   const { pathname } = useLocation();
@@ -175,7 +177,7 @@ function BasicLayout<AuthorityType = any>({
       {headerDom}
       <Layout>
         {siderDom}
-        <Content>
+        <Content className={contentClassName}>
           <BlankLayout routes={authRoutes} />
         </Content>
       </Layout>
