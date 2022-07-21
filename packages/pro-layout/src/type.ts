@@ -11,6 +11,8 @@ export type OpenPageType = '_self' | '_blank';
 export interface RouteConfig {
   path: string;
   name?: string;
+  /** 自定义名称节点 */
+  nameNode?: React.ReactNode;
   icon?: React.ElementType;
   /** 重定向不能与组件同时使用，同时使用时会忽略组件 */
   redirect?: string;
