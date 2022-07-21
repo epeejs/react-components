@@ -31,8 +31,14 @@ const renderMenu = (routes: RouteConfig[]) => {
 
     return (
       <MenuItem key={m.path}>
-        {m.icon && React.createElement(m.icon)}
-        <span>{m.name}</span>
+        {m.nameNode ? (
+          m.nameNode
+        ) : (
+          <>
+            {m.icon && React.createElement(m.icon)}
+            <span>{m.name}</span>
+          </>
+        )}
       </MenuItem>
     );
   });
