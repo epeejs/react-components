@@ -71,6 +71,10 @@ export function getRouteNode(
   const path = searchPaths[currIndex];
   const route = routes.find((m) => m.path === path);
 
+  // 如果当前路径查询不到且还存在往下查询路径，则继续当前查找
+  if (!route && searchPaths[currIndex + 1]) {
+    return getRouteNode(routes, searchPaths, currIndex + 1, result);
+  }
   if (!route || !path) {
     return result;
   }

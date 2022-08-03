@@ -1,6 +1,6 @@
 {
   "name": "@epeejs/pro-layout",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "用于快速搭建中后台页面结构",
   "main": "es/index.js",
   "module": "es/index.js",
@@ -24,6 +24,9 @@
     "epee-react-admin",
     "layout"
   ],
+  "scripts": {
+    "publish": "npm publish"
+  },
   "dependencies": {
     "classnames": "^2.3.1",
     "lodash": "^4.17.21"
