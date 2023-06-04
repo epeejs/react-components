@@ -1,8 +1,5 @@
 {
   "private": "true",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "test": "jest",
     "postinstall": "simple-git-hooks",
@@ -17,7 +14,6 @@
     "@umijs/fabric": "^4.0.1",
     "@umijs/test": "^4",
     "father": "^4.2.2",
-    "husky": ">=6",
     "jest": "^27",
     "lint-staged": ">=10",
     "prettier": "^2.3.2",
