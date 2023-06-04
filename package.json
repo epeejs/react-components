@@ -4,34 +4,33 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "lerna run dev",
-    "test": "lerna run test",
-    "build": "father-build",
-    "publish": "lerna publish --yes",
-    "bootstrap": "lerna bootstrap",
-    "prepare": "husky install"
+    "test": "jest",
+    "postinstall": "simple-git-hooks",
+    "build:layout": "pnpm --filter @epeejs/pro-layout build"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
-    "@commitlint/config-lerna-scopes": "^12.1.4",
-    "@types/jest": "^26.0.24",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13",
+    "@types/jest": "^27",
     "@types/node": "^16.0.0",
-    "@umijs/fabric": "^2.6.7",
-    "@umijs/test": "^3.5.4",
-    "antd": "^4.16.13",
-    "babel-plugin-import": "^1.13.3",
-    "father-build": "^1.19.8",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "@umijs/fabric": "^4.0.1",
+    "@umijs/test": "^4",
+    "father": "^4.2.2",
     "husky": ">=6",
-    "lerna": "^4.0.0",
+    "jest": "^27",
     "lint-staged": ">=10",
     "prettier": "^2.3.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "typescript": "^4.3.4"
+    "simple-git-hooks": "^2.8.1",
+    "ts-node": "^10",
+    "typescript": "^4"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --fix",
     "*.{json,ts,tsx,js,jsx,md,less,css,html}": "prettier --write"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "GIT_PARAMS=.git/COMMIT_EDITMSG pnpm fabric verify-commit"
   }
 }

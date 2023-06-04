@@ -28,7 +28,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "father build"
   },
   "devDependencies": {
     "@ant-design/pro-form": "^1.36.0",

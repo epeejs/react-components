@@ -25,7 +25,8 @@
     "layout"
   ],
   "scripts": {
-    "publish": "npm publish"
+    "publish": "npm publish",
+    "build": "father build"
   },
   "dependencies": {
     "classnames": "^2.3.1",

@@ -32,7 +32,7 @@
     "url": "https://github.com/epeejs/react-components/tree/main/packages/antd-img-crop"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "father build"
   },
   "dependencies": {
     "react-easy-crop": "^3.5.2"
