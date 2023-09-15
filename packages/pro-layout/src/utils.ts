@@ -41,7 +41,7 @@ export function getRouteConfigByPath(routes: RouteConfig[], path: string): Route
  * @param routes 路由配置
  */
 export function getFirstLeafNode(routes: RouteConfig[]): RouteConfig | undefined {
-  const firstNode = routes[0];
+  const firstNode = routes?.find((route) => route.target !== '_blank');
 
   // 不存在节点时，则返回 undefined
   if (!firstNode) {
